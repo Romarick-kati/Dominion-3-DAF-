@@ -1,0 +1,253 @@
+*{
+    font-family: poppins;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(96%, 97%, 98%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    border-radius: 12px;
+    padding: 2rem;
+    width: 27%;
+    min-width: 350px;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    height: auto;
+    background-color: rgb(100%, 100%, 100%);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+.container:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+}
+ 
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+.potfo{
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    background-size: cover;
+    background-image: url('Icodethis.com/photo/gody.jpg');
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    margin-right: 1.7rem;
+    transition: transform 0.3s ease;
+}
+img:hover{
+    transform: scale(1.1);
+}
+.words{
+    text-align: left;
+    margin-right: 1rem;
+}
+.words h2{
+    margin-bottom: 0.2rem;
+}
+.words .p p{
+    margin-top: 0.2rem;
+    font-weight: bolder;
+    font-size: 28px;
+}
+button{
+
+    background-color: rgb(100%, 100%, 100%);
+    height: 3rem;
+    font-size: 1.4rem;
+    text-align: start;
+    border-radius: 12px;
+    width: 70%;
+    max-width: 18rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    cursor: pointer;
+   
+ 
+}
+
+//.button:focus-within i { display: none; }
+.button:focus-within button { display: none; }
+
+
+
+button:hover{
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+button:active{
+    transform: translateY(0);
+}
+h3{
+    margin: 0;
+}
+h1{
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+h2{
+    font-size: large;
+}
+.last{
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4srem;
+    margin-right: 2.1rem;
+}
+.toggle{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+ 
+    margin-left:5rem ;
+}
+.toggle:hover{
+    transform: scale(1.1);
+}
+.toggle i{
+    font-size: 3rem;
+    transition: color 0.3s ease;
+}
+#toggle-checkbox{
+    display: none;
+}
+#toggle-checkbox:checked + .toggle i:before{
+    content: "\f205";
+    color: #4CAF50;
+}
+input[type="button"]{
+    background-color: rgb(7%, 17%, 32%);
+    color: white;
+    min-height: 3rem;
+    width: 7rem;
+    margin-left: rem;
+    margin-right: 4.8rem;
+    font-size: 19px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+input[type="button"]:hover{
+    background-color: rgb(10%, 25%, 45%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+input[type="button"]:active{
+    transform: translateY(0);
+}
+a{
+    font-size: 24px;
+    margin-bottom: 2rem;
+    color:rgb(13%, 18%, 26%);
+    transition: all 0.3s ease;
+}
+a:hover{
+    color: #007bff;
+    transform: translateY(-1px);
+}
+span{
+    margin-right: 15rem;
+    display: block;
+    margin-bottom: .5rem;
+}
+.button{
+    margin-bottom: 2rem;
+}
+h5{
+   line-height: 3;
+    width: 5.8rem;
+    margin-right: 2rem;
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        min-width: 300px;
+        padding: 1.5rem;
+    }
+    
+    .words .p p {
+        font-size: 24px;
+    }
+    
+    button {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+    
+    .toggle i {
+        font-size: 2.5rem;
+    }
+    
+    input[type="button"] {
+        width: 6rem;
+        font-size: 17px;
+    }
+    
+    a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .potfo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .words {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    img {
+        margin-right: 0;
+    }
+    
+    .words .p p {
+        font-size: 20px;
+    }
+    
+    .last {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    input[type="button"] {
+        width: 8rem;
+    }
+}
