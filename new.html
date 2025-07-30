@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expand/Collapse Example</title>
+    <style>
+       
+        details {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none; 
+        }
+
+        summary::before {
+            content: '+ '; 
+        }
+
+        details[open] summary::before {
+            content: '- '; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Expand/Collapse Content</h1>
+
+    <details>
+        <summary>Click to expand</summary>
+        <p>
+            This is the content that will be displayed when you click the plus sign.
+            You can put any HTML content here: text, images, links, etc.
+        </p>
+        <p>More detailed information goes here.</p>
+    </details>
+
+    <details>
+        <summary>Another expand/collapse section</summary>
+        <p>This is the content for the second section.</p>
+    </details>
+
+</body>
+</html>
